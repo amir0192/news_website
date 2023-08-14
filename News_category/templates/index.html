@@ -1,0 +1,16 @@
+<form method="get"> <!--для отправление запроса на бек-енд-->
+    <input type="text" name="pr" placeholder="поиск из новостей">
+    <button>поиск</button>
+
+</form>
+<hr>
+<b>Категории</b><br>
+{% for i in all_categories %}
+<a href="/category/{{i.id}}">{{i.name }}</a><br>
+{% endfor %}
+<hr>
+
+<b>Новости:</b> <br>
+{% for i in news_categories %}
+{{i.name }}<br>
+{% endfor %}
